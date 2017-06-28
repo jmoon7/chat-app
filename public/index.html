@@ -1,0 +1,119 @@
+
+
+<!-- New chat web app. 
+   Implements a main chatroom and private chatrooms between users. -->
+
+<!doctype html>
+<html lang="en">
+
+<!--  Head  -->
+
+<head>
+	<meta charset="utf-8">
+	<title> Chatuh Appuh </title>
+	<meta name="description" content="Come chat and stuff">
+	<!-- no zoom -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5, user-scalable=no">
+
+	<!-- Disable tap highlight on IE -->
+	<!-- <meta name="msapplication-tap-highlight" content="no"> -->
+
+	<!-- Web Application Manifest -->
+	<link rel="manifest" href="manifest.json">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyAN7Y3rjtd3bCOcdBEDEfoi3RT-GMpXQq4",
+	    authDomain: "chatuh-appuh.firebaseapp.com",
+	    databaseURL: "https://chatuh-appuh.firebaseio.com",
+	    projectId: "chatuh-appuh",
+	    storageBucket: "chatuh-appuh.appspot.com",
+	    messagingSenderId: "207999927170"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
+	<!-- Styling -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,800" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">	
+
+	<!-- Javascript -->
+	<script src="script.js"></script>
+
+</head>
+
+
+
+<!--  Body  -->
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center" id="header">
+				<h2> chatuh appuh </h2>
+				<p> talk with <code>other</code> people </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3"></div>
+
+			<!-- Main center box -->
+			<div class="col-sm-6" id="chat">
+
+				<!-- Popup for Chat name -->
+				<div id="popupcontainer" class="invisible">
+					<div id="popup">
+				 		<button type="button" id="popupclose">&times;</button>
+						<form id="popupform" autocomplete="off"> 
+					 		<input type="text" id="popuptext" placeholder="Name your coneversation">
+					 	</form>
+					</div>
+				</div>
+
+				<!-- Chat room -->
+				<div class="col-sm-8" id="chatroom">
+					<!-- Messages -->
+					<div class="row">
+						<div class="col-sm-12" id="messages">
+						</div>
+					</div>
+					<!-- Input text & submit -->
+					<div class="row" id="inputrow">
+							<form id="inputform" autocomplete="off"> 
+								<input type="text" id="inputtext" placeholder="Type a message"> 
+								<div id="inputLine"></div>
+								<button type="button" id="submit"> <span class="glyphicon glyphicon-comment"></span></button>
+							</form>
+					</div>
+				</div>
+				<!-- Chat lobby -->
+				<div class="col-sm-4" id="chatlobby-container">
+					<!-- Add chat button -->
+					<div id="buttoncontainer">
+						<input type="button" id="addchat" value="+">
+					</div>		
+					<!-- Chat rooms -->
+					<div id="chatlobby">
+						<table class="table table-hover table-bordered">
+							<tbody>
+							</tbody>
+						</table>
+					</div>	
+				</div>
+
+			</div>
+
+			<div class="col-sm-3"></div>
+ 		</div>
+	</div>
+</body>
+
+</html>

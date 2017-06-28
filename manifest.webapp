@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "name": "Chatuh Appuh",
+  "launch_path": "/index.html",
+  "description": "Chat with friends and stuff",
+  "developer": {
+    "name": "Jung Woo Moon.",
+    "url": "https://jungwoomoon.com"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "Chatuh Appuh",
+      "description": "Chat with friends and stuff"
+    }
+  }
+}

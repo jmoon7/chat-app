@@ -1,0 +1,231 @@
+
+
+/*-------------------------------- Document --------------------------------*/ 
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+}
+
+#header {
+	margin: 50px 0;
+	height: 20%;
+}
+
+/*-------------------------------- Lobby --------------------------------*/ 
+
+#chatlobby-container {
+	padding: 0;
+	height: 300px;
+}
+#chatlobby {
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+/* scroll bar */
+#chatlobby::-webkit-scrollbar {
+	width: 6px;
+	background-color: #F5F5F5;
+}
+#chatlobby::-webkit-scrollbar-thumb {
+	background-color: #d1d1d1;
+}
+/* add button */
+#buttoncontainer {	
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	bottom: 10px;
+	right: 20px;
+	z-index: 10;
+}
+#addchat {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    padding: 0px 15px;
+	background-color: #d1d1d1;
+	border-style: none;
+    /*-moz-border-radius: 20px 5px;*/
+    /*-webkit-border-radius: 20px 5px;*/
+    border-radius: 30px;
+    color: #ff7270;
+    font-size: 30px;
+    font-weight: 900;
+	transition: 0.2s ease;
+
+}
+#addchat:hover {
+	font-size: 34px;
+	padding: 0px 16px;
+	color: white;
+	background-color: #ff7270;
+	transition: 0.2s ease;
+}
+#addchat:focus {
+	outline: none;
+}
+.table {
+	z-index: 0;
+	cursor: pointer;
+}
+.chatnamebold {
+	font-weight: 800;
+	background-color: #ffe1d8;
+}
+/* notification badge */
+.badge {
+	margin: 0 10px;
+	background-color: #ff7270;
+}
+#examplechatroom {
+	background-color: #f4f4f4;
+}
+
+/*-------------------------------- Chatroom --------------------------------*/ 
+
+#chatroom {
+	height: 300px;
+	border-style: solid;
+	border-width: 1px;
+	border-color:  #d1d1d1;
+}
+
+/* messages */
+#messages {
+	position: absolute;
+	width: 100%;
+	height: 88%;
+	overflow-y: scroll;
+}
+/* scroll bar */
+#messages::-webkit-scrollbar {
+    width: 3px;  /* remove scrollbar space */
+}
+#messages::-webkit-scrollbar-thumb {
+    background: #ff7270;
+}
+
+.label {
+	background-color: #ff7270;
+	color: white;
+	font-size: 13px;
+	font-weight: 900;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+/* input row */
+#inputrow {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 12%;
+}
+
+#inputform {
+	height: 100%;
+}
+#inputtext {
+	width: 90%;
+	height: 100%;
+	border-style: none;
+	background-color: #f2f2f2;
+	/*color: #d1d1d1;*/
+	padding-left: 10px;
+}
+#inputtext:focus {
+    outline:none;
+}
+#inputLine {
+	position: absolute;
+	bottom: 0;
+	width: 0%;
+	height: 4px;
+	background-color: #ff7270;
+}
+
+#submit {
+	float: right;
+	width: 10%;
+	height: 100%;
+	background-color: #ff7270;
+	color: white;
+	font-weight: 800;
+	border-style: none;
+}
+
+#submit:hover {
+	color: black;
+	transition: 300ms;
+}
+#submit:focus {
+    outline:none;
+}
+
+/*-------------------------------- Popup --------------------------------*/ 
+
+.invisible {
+	display: none;
+}
+
+#popupcontainer {
+	z-index: 20;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	/*overflow: hidden;*/
+	background-color: rgba(0,0,0,0.4);
+}
+
+#popup {
+	width: 400px;
+	height: 100px;
+	margin: 15% auto;
+}
+
+#popuptext {
+	border-radius: 3px;
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+	padding: 20px;
+	border-style: none;
+}
+
+#popuptext:focus {
+	outline:none;
+}
+
+#popupclose {
+	position: absolute;
+	font-size: 15px;
+	font-weight: 900;
+	width: 25px;
+	height: 25px;
+    border-radius: 30px;
+	border-style: none;
+	transform: translate(-40%, -35%);
+	background-color: #d1d1d1;
+    color: #ff7270;
+	transition: 100ms ease;
+}
+
+#popupclose:hover {
+	transition: 100ms ease;
+	width: 30px;
+	height: 30px;
+	color: white;
+	background-color: #ff7270;
+
+}
+
+#popupclose:focus {
+	outline: none;
+}

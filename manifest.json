@@ -1,0 +1,7 @@
+{
+  "name": "Chatuh Appuh",
+  "short_name": "Chatuh Appuh",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}
