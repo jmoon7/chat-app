@@ -1,3 +1,3 @@
 # chat-app
-Chat app built using Firebase in Javascript + jQuery
-https://chatuh-appuh.firebaseapp.com/
+[Chat app](https://chatuh-appuh.firebaseapp.com/) built using Firebase in Javascript + jQuery
+
